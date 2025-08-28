@@ -1,14 +1,91 @@
 #bpi-panel{
-  position:fixed; top:12px; right:12px; z-index:999999;
-  background:rgba(20,20,20,.92); color:#fff; padding:10px 12px; width:260px;
-  font:12px/1.4 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  border-radius:12px; box-shadow:0 6px 24px rgba(0,0,0,.4)
+  position:fixed !important; 
+  top:12px !important; 
+  right:12px !important; 
+  z-index:999999 !important;
+  background:rgba(20,20,20,.95) !important; 
+  color:#fff !important; 
+  padding:10px 12px !important; 
+  width:260px !important;
+  font:12px/1.4 system-ui, -apple-system, Segoe UI, Roboto, sans-serif !important;
+  border-radius:12px !important; 
+  box-shadow:0 6px 24px rgba(0,0,0,.4) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255,255,255,.1) !important;
 }
-#bpi-panel h4{ margin:0 0 6px; font-size:14px }
-#bpi-panel label{ display:block; margin:6px 0 }
-#bpi-panel input[type="number"]{ width:110px; margin-left:6px }
-#bpi-panel button{ margin:4px 6px 0 0; padding:6px 10px; border:0; border-radius:8px; cursor:pointer }
-#bpi-panel button:hover{ filter:brightness(1.1) }
-#bpi-hits{ max-height:160px; overflow:auto; margin:8px 0 0 0; padding-left:16px }
-.bpi-mask{ position:fixed; inset:0; cursor:crosshair; background:rgba(0,0,0,.15); z-index:999998 }
-.bpi-rect{ position:fixed; border:2px solid #4ade80; background:rgba(74,222,128,.12); z-index:999999; pointer-events:none }
+
+#bpi-panel h4{ 
+  margin:0 0 6px !important; 
+  font-size:14px !important;
+  color: #fff !important;
+}
+
+#bpi-panel label{ 
+  display:block !important; 
+  margin:6px 0 !important;
+  color: #fff !important;
+}
+
+#bpi-panel input[type="number"]{ 
+  width:110px !important; 
+  margin-left:6px !important;
+  background: rgba(255,255,255,.1) !important;
+  border: 1px solid rgba(255,255,255,.2) !important;
+  color: #fff !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+}
+
+#bpi-panel button{ 
+  margin:4px 6px 0 0 !important; 
+  padding:6px 10px !important; 
+  border:0 !important; 
+  border-radius:8px !important; 
+  cursor:pointer !important;
+  background: #4ade80 !important;
+  color: #000 !important;
+  font-weight: bold !important;
+}
+
+#bpi-panel button:hover{ 
+  filter:brightness(1.1) !important;
+}
+
+#bpi-hits{ 
+  max-height:160px !important; 
+  overflow:auto !important; 
+  margin:8px 0 0 0 !important; 
+  padding-left:16px !important;
+  color: #fff !important;
+}
+
+#bpi-reading {
+  font-weight: bold !important;
+  color: #4ade80 !important;
+}
+
+#bpi-hits li {
+  margin: 2px 0 !important;
+  padding: 2px 0 !important;
+  border-bottom: 1px solid rgba(255,255,255,.1) !important;
+  color: #fff !important;
+}
+
+/* Selection UI */
+.bpi-mask{ 
+  position:fixed !important; 
+  inset:0 !important; 
+  cursor:crosshair !important; 
+  background:rgba(0,0,0,.3) !important; 
+  z-index:999998 !important;
+  user-select: none !important;
+}
+
+.bpi-rect{ 
+  position:fixed !important; 
+  border:3px solid #4ade80 !important; 
+  background:rgba(74,222,128,.15) !important; 
+  z-index:999999 !important; 
+  pointer-events:none !important;
+  box-shadow: 0 0 10px rgba(74,222,128,.5) !important;
+}

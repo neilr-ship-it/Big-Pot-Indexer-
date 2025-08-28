@@ -26,8 +26,7 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "vendor/*",
-        "test.png"
+        "vendor/*"
       ],
       "matches": ["<all_urls>"]
     }
