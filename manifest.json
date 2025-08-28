@@ -4,10 +4,17 @@
   "version": "0.1",
   "description": "Logs timestamps of big pots in poker VODs and outputs a YouTube comment.",
   "permissions": ["tabs", "activeTab", "scripting", "storage", "clipboardWrite"],
-  "host_permissions": ["https://www.youtube.com/*"],
+  "host_permissions": ["<all_urls>"],
   "background": {
     "service_worker": "src/background.js",
     "type": "module"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
   },
   "content_scripts": [
     {
@@ -18,8 +25,11 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["vendor/*"],
-      "matches": ["https://www.youtube.com/*"]
+      "resources": [
+        "vendor/*",
+        "test.png"
+      ],
+      "matches": ["<all_urls>"]
     }
   ]
 }
