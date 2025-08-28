@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Big Pot Indexer",
+  "version": "0.1",
+  "description": "Logs timestamps of big pots in poker VODs and outputs a YouTube comment.",
+  "permissions": ["tabs", "activeTab", "scripting", "storage", "clipboardWrite"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["src/content.js"],
+      "css": ["src/content.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["vendor/*"],
+      "matches": ["https://www.youtube.com/*"]
+    }
+  ]
+}
