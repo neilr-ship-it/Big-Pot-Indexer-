@@ -1,0 +1,14 @@
+#bpi-panel{
+  position:fixed; top:12px; right:12px; z-index:999999;
+  background:rgba(20,20,20,.92); color:#fff; padding:10px 12px; width:260px;
+  font:12px/1.4 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  border-radius:12px; box-shadow:0 6px 24px rgba(0,0,0,.4)
+}
+#bpi-panel h4{ margin:0 0 6px; font-size:14px }
+#bpi-panel label{ display:block; margin:6px 0 }
+#bpi-panel input[type="number"]{ width:110px; margin-left:6px }
+#bpi-panel button{ margin:4px 6px 0 0; padding:6px 10px; border:0; border-radius:8px; cursor:pointer }
+#bpi-panel button:hover{ filter:brightness(1.1) }
+#bpi-hits{ max-height:160px; overflow:auto; margin:8px 0 0 0; padding-left:16px }
+.bpi-mask{ position:fixed; inset:0; cursor:crosshair; background:rgba(0,0,0,.15); z-index:999998 }
+.bpi-rect{ position:fixed; border:2px solid #4ade80; background:rgba(74,222,128,.12); z-index:999999; pointer-events:none }
